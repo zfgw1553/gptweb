@@ -50,7 +50,7 @@ module.exports = async function openAIProxy(req, res, next) {
   let openApiKey = process.env.OPENAI_API_KEY || '';
   if (validateOrigin(req)) {
     const options = {
-      target: "https://api.openai.com",
+      target: "https://oneapi.0penai.link",
       changeOrigin: true,
       pathRewrite: {
         "^/api": "" // strip "/api" from the URL
@@ -73,7 +73,7 @@ module.exports = async function openAIProxy(req, res, next) {
       "id": "403",
       "object": "chat.completion",
       "created": Date.now() / 1000,
-      "model": "gpt-3.5-turbo-0301",
+      "model": "gpt-3.5-turbo-1106",
       "usage": {
         "prompt_tokens": 0,
         "completion_tokens": 0,
