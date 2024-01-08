@@ -2357,10 +2357,7 @@
                             <label for="preSetModel" data-i18n-key="gptModel"></label>
                             <select id="preSetModel">
                                 <option value="gpt-3.5-turbo">GPT-3.5</option>
-                                <option value="gpt-3.5-turbo-16k">GPT-3.5-16K</option>
                                 <option value="gpt-4">GPT-4</option>
-                                <option value="gpt-4-browsing" data-i18n-key="gptBrowsing"></option>
-                                <option value="gpt-4-32k">GPT-4-32k</option>
                             </select>
                         </div>
                         <div>
@@ -3194,19 +3191,16 @@
                 "chat": "会话",
                 "tts": "语音合成",
                 "stt": "语音识别",
-                "gptModel": "GPT模型",
-                "gptBrowsing": "GPT-4-联网",
+                "gptModel": "GPT模型,
                 "avatar": "用户头像",
                 "systemRole": "系统角色",
                 "presetRole": "预设角色",
                 "default": "默认",
                 "assistant": "助手",
-                "cat": "猫娘",
                 "emoji": "表情",
                 "withImg": "有图",
                 "defaultText": "",
                 "assistantText": "你是一个乐于助人的助手，尽量简明扼要地回答",
-                "catText": "你是一个可爱的猫娘，每句话结尾都要带个'喵'",
                 "emojiText": "你的性格很活泼，每句话中都要有至少一个emoji图标",
                 "imageText": "当你需要发送图片的时候，请用 markdown 语言生成，不要反斜线，不要代码框，需要使用 unsplash API时，遵循一下格式， https://source.unsplash.com/960x640/? ＜英文关键词＞",
                 "nature": "角色性格",
@@ -5716,7 +5710,7 @@
                 })
             }
             let localAvatar = localStorage.getItem("userAvatar");
-            userAvatar = setAvatarPre.src = setAvatar.value = localAvatar || setAvatar.getAttribute("value") || "https://cdn.jsdelivr.net/gh/xqdoo00o/chatgpt-web@master/avatar.jpg";
+            userAvatar = setAvatarPre.src = setAvatar.value = localAvatar || setAvatar.getAttribute("value") || "https://img03.sogoucdn.com/app/a/100520093/ca86e620b9e623ff-f4709b64c5c0ee80-dea38227c45dde77fb43b38ad6eeb72d.jpg";
             setAvatar.onchange = () => {
                 userAvatar = setAvatar.value;
                 localStorage.setItem("userAvatar", userAvatar);
